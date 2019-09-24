@@ -5,7 +5,7 @@ class NationalCreditRegulatorSpider(scrapy.Spider):
     name = 'ncr'
 
     def __init__(self):
-        self.storage_csv = 'data/national-credit-regulator.csv'
+        self.storage_csv = 'data/credit-providers.csv'
         self.base_uri = 'https://www.ncr.org.za'
 
         self.registered_url =            '{}/register_of_registrants/registered_cp.php'.format(self.base_uri)
