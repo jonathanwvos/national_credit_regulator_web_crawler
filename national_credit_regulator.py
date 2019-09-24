@@ -81,5 +81,6 @@ class NationalCreditRegulatorSpider(scrapy.Spider):
 
                 f.write('\n"%s";"%s";"%s";"%s"' % row_data)
 
+        # Navigate to next page
         if response.css('a.navigation.next::attr(href)').extract_first() != 'javascript:void(0)':
             yield response.follow(response.css('a.navigation.next::attr(href)').extract_first(), self.parse)
